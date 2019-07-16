@@ -17,7 +17,14 @@ function App() {
       <h1>React.js Card Carousel</h1>
       <Carousel items={items} />
       <div className="repository">
-        <a href="https://github.com/davi-94/react-carousel" target="_blank" rel="noreferrer noopener">GitHub Repository</a>
+        <a
+          href="https://github.com/davi-94/react-carousel"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          GitHub Repository {' '}
+          <i className="fa fa-github" aria-hidden="true" />
+        </a>
       </div>
     </main>
   );
