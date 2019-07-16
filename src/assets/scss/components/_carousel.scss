@@ -1,0 +1,56 @@
+// -----------------------------------------------------------------------------
+// This file contains Carousel styles.
+// -----------------------------------------------------------------------------
+
+.card-carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 40px;
+  color: $gray;
+}
+
+.card-carousel {
+  display: flex;
+  justify-content: center;
+  width: 640px;
+
+  &--overflow-container {
+    overflow: hidden;
+  }
+
+  &--nav__left,
+  &--nav__right {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 2px solid $react-teal;
+    border-right: 2px solid $react-teal;
+    cursor: pointer;
+    margin: 0 10px;
+    @include transform-effect(transform 15ms linear);
+  }
+
+  &--nav__left {
+    @include transform-effect(rotate(-135deg));
+
+    &:active {
+      @include transform-effect(rotate(-135deg) scale(.9));
+    }
+  }
+
+  &--nav__right {
+    @include transform-effect(rotate(45deg));
+
+    &:active {
+      @include transform-effect(rotate(45deg) scale(.9));
+    }
+  }
+
+  &-disable-nav {
+    opacity: .2;
+    border-color: $black;
+  }
+}

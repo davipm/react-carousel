@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400');
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendors/normalize';
+
+// 3. Base stuff
+@import
+  'base/base';
+
+// 4. Components
+@import
+  'components/carousel',
+  'components/card';

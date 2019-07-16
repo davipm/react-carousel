@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+@mixin transform-effect($type) {
+  -webkit-transform: $type;
+  -moz-transform: $type;
+  -ms-transform: $type;
+  -o-transform: $type;
+  transform: $type;
+}
+
+@mixin transition-effect($type) {
+  -webkit-transition: $type;
+  -moz-transition: $type;
+  -ms-transition: $type;
+  -o-transition: $type;
+  transition: $type;
+}
+

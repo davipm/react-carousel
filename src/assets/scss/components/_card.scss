@@ -1,0 +1,95 @@
+// -----------------------------------------------------------------------------
+// This file contains Card styles.
+// -----------------------------------------------------------------------------
+
+.card-carousel-cards {
+  display: flex;
+  @include transition-effect(transform 150ms ease-out);
+  @include transform-effect(translateX(0px));
+
+  .card-carousel--card {
+    margin: 0 10px 2px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 4px 15px 0 rgba(40,44,53,.06), 0 2px 2px 0 rgba(40,44,53,.08);
+    -moz-box-shadow: 0 4px 15px 0 rgba(40,44,53,.06), 0 2px 2px 0 rgba(40,44,53,.08);
+    box-shadow: 0 4px 15px 0 rgba(40,44,53,.06), 0 2px 2px 0 rgba(40,44,53,.08);
+    background-color: $white;
+    border-radius: 4px;
+    z-index: 3;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    img {
+      vertical-align: bottom;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      @include transition-effect(opacity 150ms linear);
+      user-select: none;
+
+      &:hover {
+        opacity: .5;
+      }
+    }
+
+    &--footer {
+      border-top: 0;
+      padding: 7px 15px;
+
+      p {
+        padding: 3px 0;
+        margin: 0 0 2px;
+        font-size: 19px;
+        font-weight: 500;
+        color: $react-navy;
+        user-select: none;
+
+        &:nth-of-type(2) {
+          font-size: 12px;
+          font-weight: 300;
+          padding: 6px;
+          background: rgba(40, 44, 53, .06);
+          display: inline-block;
+          position: relative;
+          margin-left: 4px;
+          color: $gray;
+
+          &::before {
+            content: '';
+            float: left;
+            position: absolute;
+            top: 0;
+            left: -12px;
+            width: 0;
+            height: 0;
+            border-color: transparent rgba(40,44,53, .06) transparent transparent;
+            border-style: solid;
+            border-width: 12px 12px 12px 0;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: -1px;
+            float: left;
+            width: 4px;
+            height: 4px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            background-color: $white;
+            -webkit-box-shadow: -0px -0px 0px #004977;
+            -moz-box-shadow: -0px -0px 0px #004977;
+            box-shadow: -0px -0px 0px #004977;
+          }
+        }
+      }
+    }
+  }
+}
