@@ -16,6 +16,9 @@ function App() {
     <main id="app">
       <h1>React.js Card Carousel</h1>
       <Carousel items={items} />
+      <div className="repository">
+        <a href="https://github.com/davi-94/react-carousel" target="_blank" rel="noreferrer noopener">GitHub Repository</a>
+      </div>
     </main>
   );
 }

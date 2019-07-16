@@ -14,6 +14,12 @@ Fork this repository
 npm i
 ```
 
+## Development
+
+```
+npm start
+```
+
 ## Deployment
 
 ```
