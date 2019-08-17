@@ -7,6 +7,11 @@ export default function Carousel({ items }) {
   const [endOfList, setEndOfList] = useState(false);
   const [headOfList, setHeadOfList] = useState(false);
 
+  useEffect(() => {
+    atEndOfList();
+    atHeadOfList();
+  });
+
   function moveCarousel(direction) {
     if (direction === 1 && !endOfList) {
       setCurrentOffSet(currentOffSet - paginationFactor);
@@ -24,11 +29,6 @@ export default function Carousel({ items }) {
     setHeadOfList(currentOffSet === 0);
   }
 
-  useEffect(() => {
-    atEndOfList();
-    atHeadOfList();
-  });
-  
   return (
     <div className="card-carousel-wrapper">
       <div className={`card-carousel--nav__left ${headOfList ? 'card-carousel-disable-nav': ''}`} onClick={() => {moveCarousel(-1)}} />
