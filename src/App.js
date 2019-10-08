@@ -1,15 +1,15 @@
-import React from 'react';
-import Carousel from './components/Carousel';
+import React from "react";
+import Carousel from "./components/Carousel";
 
 function App() {
   const items = [
-    {name: 'Brazil', tag: "Brasilia"},
-    {name: 'Japan', tag: "Tokyo"},
-    {name: 'Italy', tag: "Roma"},
-    {name: 'China', tag: "Beijing"},
-    {name: 'French', tag: "Paris"},
-    {name: 'Russia', tag: "Moscow"},
-    {name: 'England', tag: "London"},
+    { name: "Brazil", tag: "Brasilia" },
+    { name: "Japan", tag: "Tokyo" },
+    { name: "Italy", tag: "Roma" },
+    { name: "China", tag: "Beijing" },
+    { name: "French", tag: "Paris" },
+    { name: "Russia", tag: "Moscow" },
+    { name: "England", tag: "London" }
   ];
 
   return (
@@ -22,8 +22,7 @@ function App() {
           target="_blank"
           rel="noreferrer noopener"
         >
-          GitHub Repository {' '}
-          <i className="fa fa-github" aria-hidden="true" />
+          GitHub Repository <i className="fa fa-github" aria-hidden="true" />
         </a>
       </div>
     </main>
